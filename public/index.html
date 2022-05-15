@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>autogainz</title>
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+  <script src="https://www.gstatic.com/firebasejs/7.16.1/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/7.16.1/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/7.16.1/firebase-firestore.js"></script>
+
+  <script>
+    var firebaseConfig = {
+      apiKey: "AIzaSyDVGRSIdPof61-KZAO-pn24pA8TJSgbffQ",
+      authDomain: "fir-getstarted-774e0.firebaseapp.com",
+      projectId: "fir-getstarted-774e0",
+      storageBucket: "fir-getstarted-774e0.appspot.com",
+      messagingSenderId: "399256740679",
+      appId: "1:399256740679:web:2e4dd9532be7d6806f2262"
+    };
+    firebase.initializeApp(firebaseConfig);
+  </script>
+
+  <script src="autogainz.js" defer></script>
+</head>
+<body>
+  <h1>Welcome to autogainz! 💪</h1>
+
+  <section id="signedOut">
+    <button id="signInButton" class="btn btn-primary">Sign in with Google</button>
+  </section>
+
+  <section id="signedIn" hidden="true">
+    <button id="signOutButton" class="btn btn-primary">Sign out</button>
+    
+    <div id="userDetails"></div>
+    
+    <section>
+      <h2>Exercises</h2>
+      <label for="excerciseName">Name of excercise to add:</label>
+      <input type="text" id="excerciseName" name="excerciseName"><br>
+      <button id="createExcercise" class="btn btn-primary">Add an excercise to the list</button><br>
+      <label for="exercisesList">List of exercises:</label><br>
+      <ul id="exercisesList" name="exercisesList"></ul>
+    </section>
+
+  </section>
+
+</body>
+</html>
