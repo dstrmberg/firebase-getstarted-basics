@@ -29,8 +29,8 @@ auth.onAuthStateChanged(user => {
     }
 });
 
-const excerciseName = document.getElementById('excerciseName');
-const createExcercise = document.getElementById('createExcercise');
+const exerciseName = document.getElementById('exerciseName');
+const createExercise = document.getElementById('createExercise');
 const exercisesList = document.getElementById('exercisesList');
 
 const db = firebase.firestore();
@@ -44,13 +44,13 @@ auth.onAuthStateChanged(user => {
         // Database Reference
         exercisesReference = db.collection('exercises')
 
-        createExcercise.onclick = () => {
+        createExercise.onclick = () => {
 
         const { serverTimestamp } = firebase.firestore.FieldValue;
 
         exercisesReference.add({
             uid: user.uid,
-            name: excerciseName.value,
+            name: exerciseName.value,
             createdAt: serverTimestamp()
         });
 
